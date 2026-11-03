@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivinhe o Número Secreto</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎯 Adivinhe o Número Secreto</h1>
+    <p class="intro">O computador tenta adivinhar um número entre 1 e 100 usando busca binária.</p>
+
+    <section id="menu" class="card">
+      <h2>Menu</h2>
+      <button onclick="iniciarJogo()">1 - Jogar</button>
+      <button onclick="compararEstrategias()">2 - Comparar estratégias</button>
+    </section>
+
+    <section id="jogo" class="card hidden">
+      <h2>🎮 Modo Jogo</h2>
+      <p>Pense em um número entre <strong>1 e 100</strong>.</p>
+      <div class="chute" id="chute">50</div>
+      <p>Tentativa: <strong id="tentativas">1</strong></p>
+
+      <div class="botoes">
+        <button onclick="responder('maior')">⬆️ Maior</button>
+        <button onclick="responder('acertou')">✅ Acertou</button>
+        <button onclick="responder('menor')">⬇️ Menor</button>
+      </div>
+
+      <p id="mensagem"></p>
+      <button class="secundario" onclick="voltarMenu()">Voltar ao menu</button>
+    </section>
+
+    <section id="comparacao" class="card hidden">
+      <h2>📊 Comparação de Estratégias</h2>
+      <div id="resultadoComparacao"></div>
+      <button class="secundario" onclick="voltarMenu()">Voltar ao menu</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
